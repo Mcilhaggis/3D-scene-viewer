@@ -5,6 +5,8 @@ import './style.css'
 async function main() {
     const container = document.querySelector('#scene-container');
 
+
+    
     const viewer = new SceneViewer(container);
     // complete async tasks
     await viewer.init();
@@ -22,4 +24,4 @@ async function main() {
 // call main to start the app
 main().catch((err) => {
     console.error(err);
-  });
+});

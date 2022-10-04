@@ -2,7 +2,6 @@ import { loadLittleTokyo } from './components/models/littleTokyo.js';
 import { loadFlamingo } from './components/models/flamingo.js';
 
 import { createCamera } from './components/camera.js';
-import { createCube } from './components/cube.js';
 import { createScene } from './components/scene.js';
 import { createLights } from './components/lights.js';
 
@@ -19,24 +18,23 @@ let loop;
 let controls;
 
 
+
+
 class SceneViewer {
     // 1. Create an instance of the World app
     constructor(container) {
         camera = createCamera();
         scene = createScene();
         renderer = createRenderer();
-
         controls = createControls(camera, renderer.domElement);
         controls.addEventListener('change', () => {
             this.render();
         });
+
         loop = new Loop(camera, scene, renderer);
 
         container.append(renderer.domElement);
         const { ambientLight, mainLight } = createLights();
-
-        // Disbled rotation animation
-        // loop.updatables.push(cube);
 
         // Enabled damping animation
         loop.updatables.push(controls);
@@ -45,6 +43,8 @@ class SceneViewer {
 
         const resizer = new Resizer(container, camera, renderer);
     }
+
+
 
     async init() {
         // asynchronous setup here to load models
@@ -69,5 +69,6 @@ class SceneViewer {
         loop.stop();
     }
 }
+
 
 export { SceneViewer };
