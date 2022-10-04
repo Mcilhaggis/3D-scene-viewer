@@ -8,8 +8,8 @@ function createControls(camera, canvas) {
     controls.tick = () => controls.update();
     
     // Control zoom limits
-    controls.minDistance = 5;
-    controls.maxDistance = 20
+    // controls.minDistance = 5;
+    // controls.maxDistance = 20
 
     return controls;
 }
