@@ -3,7 +3,7 @@ import { Color, Scene } from 'three';
 function createScene() {
   const scene = new Scene();
 
-  scene.background = new Color('purple');
+  scene.background = new Color('lightblue');
 
   return scene;
 }
