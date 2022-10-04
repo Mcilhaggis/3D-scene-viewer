@@ -1,4 +1,5 @@
-import { LittleTokyo } from './components/models/littleTokyo.js';
+import { loadLittleTokyo } from './components/models/littleTokyo.js';
+import { loadFlamingo } from './components/models/flamingo.js';
 
 import { createCamera } from './components/camera.js';
 import { createCube } from './components/cube.js';
@@ -15,6 +16,8 @@ let camera;
 let renderer;
 let scene;
 let loop;
+let controls;
+
 
 class SceneViewer {
     // 1. Create an instance of the World app
@@ -23,15 +26,13 @@ class SceneViewer {
         scene = createScene();
         renderer = createRenderer();
 
-        const controls = createControls(camera, renderer.domElement);
+        controls = createControls(camera, renderer.domElement);
         controls.addEventListener('change', () => {
             this.render();
         });
         loop = new Loop(camera, scene, renderer);
 
         container.append(renderer.domElement);
-
-        const cube = createCube();
         const { ambientLight, mainLight } = createLights();
 
         // Disbled rotation animation
@@ -40,17 +41,21 @@ class SceneViewer {
         // Enabled damping animation
         loop.updatables.push(controls);
 
-        scene.add(ambientLight, mainLight, cube);
+        scene.add(ambientLight, mainLight);
 
         const resizer = new Resizer(container, camera, renderer);
     }
 
     async init() {
-        // asynchronous setup here
-        // load models
-        await LittleTokyo();
+        // asynchronous setup here to load models
+        // const { littleTokyo } = await loadLittleTokyo();
+        // scene.add(littleTokyo)
+        const { flamingo } = await loadFlamingo();
+        console.log(flamingo.position)
+        controls.target.copy(flamingo.position);
 
-      }
+        scene.add(flamingo)
+    }
 
     render() {
         renderer.render(scene, camera);
