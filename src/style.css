@@ -2,7 +2,6 @@ body {
     /* remove margins and scroll bars */
     margin: 0;
     overflow: hidden;
-  background-color: red;
     /* style text */
     text-align: center;
     font-size: 12px;
