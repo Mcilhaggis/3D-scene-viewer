@@ -32,7 +32,7 @@ body {
     height: 30rem;
     }
   
-  #scene-container {
+  .scene-container {
     /* tell our scene container to take up the full page */
     position: absolute;
     width: 100%;

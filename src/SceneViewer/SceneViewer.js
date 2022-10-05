@@ -51,7 +51,6 @@ class SceneViewer {
         // const { littleTokyo } = await loadLittleTokyo();
         // scene.add(littleTokyo)
         const { flamingo } = await loadFlamingo();
-        console.log(flamingo.position)
         controls.target.copy(flamingo.position);
 
         scene.add(flamingo)

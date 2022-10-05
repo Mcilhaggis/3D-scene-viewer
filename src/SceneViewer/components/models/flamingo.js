@@ -10,7 +10,6 @@ async function loadFlamingo() {
     ]);
 
     const flamingo = setupModel(flamingoData)
-    console.log(flamingoData)
     flamingo.position.set(0, 0, 2.5);
 
     return {flamingo}
