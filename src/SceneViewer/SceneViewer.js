@@ -20,7 +20,7 @@ let controls;
 
 
 
-class SceneViewer {
+export default class SceneViewer {
     // 1. Create an instance of the World app
     constructor(container) {
         camera = createCamera();
@@ -32,7 +32,7 @@ class SceneViewer {
         });
 
         loop = new Loop(camera, scene, renderer);
-
+        console.log(container)
         container.append(renderer.domElement);
         const { ambientLight, mainLight } = createLights();
 
@@ -46,18 +46,23 @@ class SceneViewer {
 
 
 
-    async init() {
-        // asynchronous setup here to load models
-        // const { littleTokyo } = await loadLittleTokyo();
-        // scene.add(littleTokyo)
-        const { flamingo } = await loadFlamingo();
-        controls.target.copy(flamingo.position);
+    // async init() {
+    // asynchronous setup here to load models
+    // const { littleTokyo } = await loadLittleTokyo();
+    // scene.add(littleTokyo)
+    // const { flamingo } = await loadFlamingo();
+    // controls.target.copy(flamingo.position);
 
-        scene.add(flamingo)
-    }
+    // scene.add(flamingo)
+    // }
 
     render() {
-        renderer.render(scene, camera);
+        // renderer.render(scene, camera);
+        return (
+            <div class="canvasContainer">
+                <canvas ref={this.canvasRef} />
+            </div>
+        );
     }
 
     start() {
@@ -70,4 +75,4 @@ class SceneViewer {
 }
 
 
-export { SceneViewer };
+// export { SceneViewer };

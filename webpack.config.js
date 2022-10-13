@@ -9,8 +9,17 @@ module.exports = {
     },
     mode: 'development',
     //   In order to import a CSS file from within a JavaScript module, you need to install and add the style-loader and css-loader to your module configuration
+
+    devServer: {
+        port: 8080
+    },
     module: {
         rules: [
+            {
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
+            },
             {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
@@ -22,4 +31,9 @@ module.exports = {
             // },
         ]
     },
+    // plugins: [
+    //     new HtmlWebpackPlugin({
+    //         template: path.join(__dirname, '/src/index.html')
+    //     })
+    // ]
 };
