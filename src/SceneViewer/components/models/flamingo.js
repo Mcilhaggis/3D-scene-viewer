@@ -1,12 +1,13 @@
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { setupModel } from './setupModel.js';
 
-async function loadFlamingo() {
+async function loadFlamingo(source) {
+    console.log("loading flamingo")
     const loader = new GLTFLoader();
-
+console.log(source)
 
     const [flamingoData] = await Promise.all([
-        loader.loadAsync('./assets/models/Flamingo.glb'),
+        loader.loadAsync('./assets/models/'+ source),
     ]);
 
     const flamingo = setupModel(flamingoData)

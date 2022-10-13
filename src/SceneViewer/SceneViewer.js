@@ -16,13 +16,12 @@ let renderer;
 let scene;
 let loop;
 let controls;
-
-
-
+let config;
 
 class SceneViewer {
     // 1. Create an instance of the World app
-    constructor(container) {
+    constructor(container, _config) {
+        config = _config
         camera = createCamera();
         scene = createScene();
         renderer = createRenderer();
@@ -42,16 +41,15 @@ class SceneViewer {
         scene.add(ambientLight, mainLight);
 
         const resizer = new Resizer(container, camera, renderer);
+        console.log('config2', config)
+
     }
-
-
-
+    
+    
     async init() {
-        // asynchronous setup here to load models
-        // const { littleTokyo } = await loadLittleTokyo();
-        // scene.add(littleTokyo)
-        const { flamingo } = await loadFlamingo();
-        console.log(flamingo.position)
+        console.log('******config', config)
+
+        const { flamingo } = await loadFlamingo(config.glbSourceFileLocation);
         controls.target.copy(flamingo.position);
 
         scene.add(flamingo)
