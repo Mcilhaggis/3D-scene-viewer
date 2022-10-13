@@ -1,11 +1,12 @@
 {
     "id": 1,
     "title": "Flamingo",
-    "glbSourceFileLocation": "Flamingo.glb",
+    "glbSourceFileLocation": "viking_room.glb",
     "modelPositionX": 0,
     "modelPositionY": 0,
     "modelPositionZ": 2.5,
     "cameraPostitionX":-125,
     "cameraPostitionY": 1.5,
-    "cameraPostitionZ": 300
+    "cameraPostitionZ": 300,
+    "backgroundColour": "lemonchiffon"
 }

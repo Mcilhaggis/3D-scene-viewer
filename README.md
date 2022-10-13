@@ -12,14 +12,13 @@ webpack --watch
 
 
 ##Wants: 
-• Import data from json files
 • keyboard navigation 
 • 
 • 
 
 
 ##Stretch goals
-• Clickable controls to move and rotate object
+• Clickable/keyboard controls to move and rotate object
 • 
 • 
 • 
@@ -32,3 +31,7 @@ webpack --watch
 • Tab interactivity is spotty, and only works for some buttons. It’s hard to tell which without a visual indication, and the functionality seems to be spotty, as I’m not getting the same results as just clicking on the buttons
 • No screen reader description (known)
 •The bottom of the I-Frame is cut off when viewed in fullscreen at 200%
+
+##Features
+• Import data (images and controls) from json files
+
