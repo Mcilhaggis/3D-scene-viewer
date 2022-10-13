@@ -1,4 +1,4 @@
-#Scene Viewer with Three.js
+# Scene Viewer with Three.js
 ```
 npm i 
 ```
@@ -9,29 +9,29 @@ For continous monitoring for changes:
 ```
 webpack --watch 
 ```
+open in a live server 
 
 
-##Wants: 
+
+
+## Wants: 
 • keyboard navigation 
+• No screen reader description
+•  Clickable/keyboard controls to move and rotate object and toggle labels
+•The bottom of the I-Frame visible in fullscreen at 200%
+
+
+## Stretch goals
+• Having a test page for anyone to test lighting, camera position and scale 
 • 
 • 
 
 
-##Stretch goals
-• Clickable/keyboard controls to move and rotate object
-• 
-• 
-• 
 
-
-
-##Concerns to tackle from Sketchfab integration:
+## Concerns to tackle from Sketchfab integration:
 • No movement of object with keyboard when in orbit mode, and limited movement in first-person mode
-• Tab focus only visible on top left two elements
-• Tab interactivity is spotty, and only works for some buttons. It’s hard to tell which without a visual indication, and the functionality seems to be spotty, as I’m not getting the same results as just clicking on the buttons
-• No screen reader description (known)
-•The bottom of the I-Frame is cut off when viewed in fullscreen at 200%
 
-##Features
+
+## Features
 • Import data (images and controls) from json files
 
