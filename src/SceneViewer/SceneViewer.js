@@ -1,5 +1,5 @@
 import { loadLittleTokyo } from './components/models/littleTokyo.js';
-import { loadFlamingo } from './components/models/flamingo.js';
+import { loadModel } from './components/models/loadModel.js';
 
 import { createCamera } from './components/camera.js';
 import { createScene } from './components/scene.js';
@@ -49,10 +49,10 @@ class SceneViewer {
     async init() {
         console.log('******config', config)
 
-        const { flamingo } = await loadFlamingo(config.glbSourceFileLocation);
-        controls.target.copy(flamingo.position);
+        const { model } = await loadModel(config.glbSourceFileLocation);
+        controls.target.copy(model.position);
 
-        scene.add(flamingo)
+        scene.add(model)
     }
 
     render() {
