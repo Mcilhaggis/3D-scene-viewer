@@ -4,5 +4,8 @@
     "glbSourceFileLocation": "Flamingo.glb",
     "modelPositionX": 0,
     "modelPositionY": 0,
-    "modelPositionZ": 2.5
+    "modelPositionZ": 2.5,
+    "cameraPostitionX":-125,
+    "cameraPostitionY": 1.5,
+    "cameraPostitionZ": 300
 }

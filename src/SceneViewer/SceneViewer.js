@@ -22,7 +22,7 @@ class SceneViewer {
     // 1. Create an instance of the World app
     constructor(container, _config) {
         config = _config
-        camera = createCamera();
+        camera = createCamera(config);
         scene = createScene();
         renderer = createRenderer();
         controls = createControls(camera, renderer.domElement);
