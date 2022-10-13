@@ -1,19 +1,17 @@
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { setupModel } from './setupModel.js';
 
-async function loadModel(source) {
+async function loadModel({glbSourceFileLocation, modelPositionX, modelPositionY, modelPositionZ}) {
     console.log("loading model")
     const loader = new GLTFLoader();
-console.log(source)
 
     const [modelData] = await Promise.all([
-        loader.loadAsync('./assets/models/'+ source),
+        loader.loadAsync('./assets/models/'+ glbSourceFileLocation),
     ]);
 
     const model = setupModel(modelData)
-    console.log(modelData)
-    model.position.set(0, 0, 2.5);
 
+    model.position.set(modelPositionX, modelPositionY, modelPositionZ)
     return {model}
 
 }

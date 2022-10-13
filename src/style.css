@@ -15,10 +15,10 @@ body {
     display: flex;
     padding-top: 2rem;
     width: calc(100% - 2rem);
-    margin: 0 auto 20rem
+    margin: 0 auto 5rem
   }
 
-  #main-container{
+  .main-container{
     display: flex;
     flex-direction: column-reverse;
     color: silver;
@@ -31,6 +31,7 @@ body {
     max-height: calc(100vmin - 4rem);
     height: 30rem;
     }
+   
   
   #scene-container {
     /* tell our scene container to take up the full page */

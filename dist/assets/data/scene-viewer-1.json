@@ -1,5 +1,8 @@
 {
     "id": 1,
     "title": "Flamingo",
-    "glbSourceFileLocation": "Flamingo.glb"
+    "glbSourceFileLocation": "Flamingo.glb",
+    "modelPositionX": 0,
+    "modelPositionY": 0,
+    "modelPositionZ": 2.5
 }

@@ -39,19 +39,14 @@ class SceneViewer {
         loop.updatables.push(controls);
 
         scene.add(ambientLight, mainLight);
-
         const resizer = new Resizer(container, camera, renderer);
-        console.log('config2', config)
-
     }
     
     
     async init() {
         console.log('******config', config)
-
-        const { model } = await loadModel(config.glbSourceFileLocation);
+        const { model } = await loadModel(config);
         controls.target.copy(model.position);
-
         scene.add(model)
     }
 
