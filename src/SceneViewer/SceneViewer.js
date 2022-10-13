@@ -1,6 +1,4 @@
-import { loadLittleTokyo } from './components/models/littleTokyo.js';
 import { loadModel } from './components/models/loadModel.js';
-
 import { createMenu } from './components/menu.js';
 import { createCamera } from './components/camera.js';
 import { createScene } from './components/scene.js';
@@ -21,7 +19,6 @@ let controls;
 let config;
 
 class SceneViewer {
-    // 1. Create an instance of the World app
     constructor(container, _config) {
         config = _config
         camera = createCamera(config);
@@ -38,9 +35,9 @@ class SceneViewer {
         container.append(renderer.domElement);
         const { ambientLight, mainLight } = createLights();
 
-        // Enabled damping animation
+        // Enabled damping animation (has the object slow stop, rather than extreme halt which is unlifelike)
         loop.updatables.push(controls);
-   
+
         scene.add(ambientLight, mainLight);
         const resizer = new Resizer(container, camera, renderer);
     }
