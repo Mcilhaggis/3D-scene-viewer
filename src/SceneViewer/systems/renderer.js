@@ -9,6 +9,7 @@ import { WebGLRenderer } from 'three';
 // SpotLight => Spotlights
 
 function createRenderer() {
+  // antialias reduce jaggy edges on models 
     const renderer = new WebGLRenderer({ antialias: true });
 
   // turn on the physically correct lighting model
