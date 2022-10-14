@@ -1,5 +1,5 @@
 import { loadModel } from './components/models/loadModel.js';
-import { createMenu } from './components/menu.js';
+import { createGui } from './components/gui-menu-panel.js';
 import { createCamera } from './components/camera.js';
 import { createScene } from './components/scene.js';
 import { createLights } from './components/lights.js';
@@ -24,7 +24,7 @@ class SceneViewer {
         camera = createCamera(config);
         scene = createScene(config);
         renderer = createRenderer();
-        menu = createMenu();
+        // menu = createGui();
         controls = createControls(camera, renderer.domElement);
         controls.addEventListener('change', () => {
             this.render();

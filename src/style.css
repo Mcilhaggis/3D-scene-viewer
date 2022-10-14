@@ -1,47 +1,54 @@
 body {
-    /* remove margins and scroll bars */
-    margin: 0;
-    overflow: hidden;
-    /* style text */
-    text-align: center;
-    font-size: 12px;
-    font-family: Sans-Serif;
+  /* remove margins and scroll bars */
+  margin: 0;
+  overflow: hidden;
+  /* style text */
+  text-align: center;
+  font-size: 12px;
+  font-family: Sans-Serif;
 
-    /* color text */
-    color: #444;
-  }
+  /* color text */
+  color: #444;
+}
 
-  .content{
-    display: flex;
-    padding-top: 2rem;
-    width: calc(100% - 2rem);
-    margin: 0 auto 5rem
-  }
+.content {
+  display: flex;
+  padding-top: 2rem;
+  width: calc(100% - 2rem);
+  margin: 0 auto 5rem
+}
 
-  .main-container{
-    display: flex;
-    flex-direction: column-reverse;
-    color: silver;
-    position: relative;
-    border: 1px solid silver;
-    border-radius: 6px;
-    box-shadow: 1px 1px 10px 1px silver;
-    padding: 0;
-    width: 100%;
-    max-height: calc(100vmin - 4rem);
-    height: 30rem;
-    }
-   
-  
-  #scene-container {
-    /* tell our scene container to take up the full page */
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  
-    /*
+.main-container {
+  /* display: flex;
+    flex-direction: column-reverse; */
+  color: silver;
+  position: relative;
+  border: 1px solid silver;
+  border-radius: 6px;
+  box-shadow: 1px 1px 10px 1px silver;
+  padding: 0;
+  width: 100%;
+  max-height: calc(100vmin - 4rem);
+  height: 30rem;
+}
+
+
+#scene-container {
+  /* tell our scene container to take up the full page */
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  /*
       Set the container's background color to the same as the scene's
       background to prevent flashing on load
     */
-    background-color: skyblue;
-  }
+  background-color: skyblue;
+}
+
+.lil-gui {
+  /* to keep the controls visible above the scene placement */
+  z-index: 1;
+  float: right;
+}

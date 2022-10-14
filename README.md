@@ -48,5 +48,9 @@ Hosts all of the plugins used throughout.
 
 ## Features
 - Import data (images and controls) from json files
-
+- Intgrates lil-gui to allow for customisation and controls
 ---
+
+## Packages used
+- Three.js - to create the scene and render glb
+- lil-gui - to add a floating control panel, aiding in AODA concerns over keyboard navigation of item.
