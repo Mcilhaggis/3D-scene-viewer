@@ -1,5 +1,5 @@
 import { loadModel } from './components/models/loadModel.js';
-import { createGui } from './components/gui-menu-panel.js';
+import createGui from './components/gui-menu-panel.js';
 import { createCamera } from './components/camera.js';
 import { createScene } from './components/scene.js';
 import { createLights } from './components/lights.js';

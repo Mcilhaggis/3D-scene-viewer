@@ -3,7 +3,7 @@ import GUI from 'lil-gui';
 
 const createGui = () => {
     const gui = new GUI({
-        container: document.getElementById('scene1')
+        container: document.getElementById('scene-container')
     });
     console.log(gui)
     const myObject = {
