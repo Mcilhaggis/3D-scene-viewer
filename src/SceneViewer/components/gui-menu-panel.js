@@ -10,13 +10,18 @@ const createGui = () => {
         myBoolean: true,
         myString: 'lil-gui',
         myNumber: 1,
-        myFunction: function () { alert('hi') }
+        myFunction: function () { alert('hi') },
+        moveLeft: function () { alert('move left') },
+        moveRight: function () { alert('move right') },
+        moveUp: function () { alert('move up') },
+        moveDown: function () { alert('move down') }
     }
+    // keyboard Controls
+    gui.add(myObject, 'moveLeft'); // ButtonLeft
+    gui.add(myObject, 'moveRight'); // ButtonRight
+    gui.add(myObject, 'moveUp'); // ButtonUp
+    gui.add(myObject, 'moveDown'); // ButtonDown
 
-    gui.add(myObject, 'myBoolean');  // Checkbox
-    gui.add(myObject, 'myFunction'); // Button
-    gui.add(myObject, 'myString');   // Text Field
-    gui.add(myObject, 'myNumber');   // Number Field
 
     // Add sliders to number fields by passing min and max
     gui.add(myObject, 'myNumber', 0, 1);
@@ -26,12 +31,13 @@ const createGui = () => {
     gui.add(myObject, 'myNumber', [0, 1, 2]);
     gui.add(myObject, 'myNumber', { Label1: 0, Label2: 1, Label3: 2 });
 
+
     // Chainable methods
     // gui.add(myObject, 'myProperty')
-        // .myString('Custom Name')
-        // .onChange(value => {
-        //     console.log(value);
-        // });
+    // .myString('Custom Name')
+    // .onChange(value => {
+    //     console.log(value);
+    // });
 
     // Create color pickers for multiple color formats
     const colorFormats = {
