@@ -1,5 +1,6 @@
 import { Color, Scene } from 'three';
 
+
 function createScene({backgroundColour}) {
   const scene = new Scene();
 

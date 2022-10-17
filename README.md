@@ -36,11 +36,13 @@ Hosts all of the plugins used throughout.
 - No screen reader description
 - Clickable/keyboard controls to move and rotate object and toggle labels
 - The bottom of the I-Frame visible in fullscreen at 200%
+- Render if there is more than one on the webpage using its repsenctive json file to populate content.
 
 
 ## Stretch goals
 - Having a test page on the 101 for anyone to test lighting, camera position and scale 
-
+- Convert to React
+- Convert to Typescript
 
 ## Concerns to tackle from Sketchfab integration:
 - No movement of object with keyboard when in orbit mode, and limited movement in first-person mode
@@ -48,5 +50,9 @@ Hosts all of the plugins used throughout.
 
 ## Features
 - Import data (images and controls) from json files
-
+- Intgrates lil-gui to allow for customisation and controls
 ---
+
+## Packages used
+- Three.js - to create the scene and render glb
+- lil-gui - to add a floating control panel, aiding in AODA concerns over keyboard navigation of item.
